@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayfarid Ventures | Quality Advertising Products</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script> <!-- Loads JavaScript without blocking the HTML from being processed -->
+</head>
+
+<body>
+    <header>
+        <a href = "#Home" class="logo">
+            <img src="Images/Logo/Image3.png" alt="Mayfarid Ventures Logo">
+        </a>
+
+        <nav>
+                <!---- If you want it in a list format use <ul> and <li> tags -->
+                <a href="#Home">Home</a>
+                <a href="#Products">Products</a>
+                <a href="#About">About</a>
+                <a href="#Contact">Contact</a>
+        </nav>
+
+    </header>
+    <!-- Hero section -->
+    <section id="Home" class="hero">
+        <div class="hero-content">
+            <h1>
+                <span class="heading-grey">Quality Advertising Products.</span>
+                <span class="heading-blue">Guaranteed Quality.</span>
+                <span class="heading-green">Competitive Pricing.</span>
+            </h1>
+
+            <p>
+                We supply high-quality laminating films and materials to businesses across Nigeria.
+            </p>
+
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <img src="Images/HeroPage/Sheild.png" alt="" class="feature-icon" />
+                    <div class="feature-text">
+                        <strong>Premium Quality</strong>
+                        <p>Reliable and consistent quality.</p>
+                    </div>
+                </div>
+
+                <div class="hero-feature">
+                    <img src="Images/HeroPage/Globe.png" alt="" class="feature-icon" />
+                    <div class="feature-text">
+                        <strong>Nationwide Supply</strong>
+                        <p>Supplying businesses across Nigeria.</p>
+                    </div>
+                </div>
+
+                <div class="hero-feature">
+                    <img src="Images/HeroPage/Badge.png" alt="" class="feature-icon" />
+                    <div class="feature-text">
+                        <strong>Competitive Prices</strong>
+                        <p>High quality products at excellent value.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#Products" class="btn btn-primary">
+                    View Products
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+
+                <a href="#Contact" class="btn btn-secondary">
+                    Request a Quote
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Products" class="products">
+        <div class="section-heading">
+            <p class="section-label">Our Products</p>
+            <h2>Explore Our Products</h2>
+            <p>
+                We offer a wide range of materials and equipment to meet your production and advertising needs.
+            </p>
+        </div>
+
+        <div id="productGrid" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <div id="productModal" class="product-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close="true"></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button type="button" class="modal-close" aria-label="Close product preview">&times;</button>
+            <div class="modal-image-wrap">
+                <img id="modalImage" src="" alt="" />
+            </div>
+            <div class="modal-content">
+                <span id="modalCategory" class="product-tag"></span>
+                <h3 id="modalTitle">Product</h3>
+                <p id="modalDescription"></p>
+                <div class="modal-meta">
+                    <span>Availability</span>
+                    <strong>Ready for order</strong>
+                </div>
+                <div class="modal-actions">
+                    <a href="#Contact" class="btn btn-primary">Request Quote</a>
+                    <button type="button" class="btn btn-secondary modal-dismiss">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="About" class="about">
+        <div class="section-heading section-heading-left">
+            <p class="section-label">Why Choose Us</p>
+            <h2>Built for business continuity and quality output.</h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-copy">
+                <p>
+                    Mayfarid Ventures partners with businesses that need reliable print finishing, protective materials,
+                    and production support. From small print shops to larger commercial operations, we deliver practical
+                    solutions that combine durability, affordability, and dependable service.
+                </p>
+                <ul class="about-points">
+                    <li>Trusted supply partner for packaging and finishing materials</li>
+                    <li>Strong focus on quality consistency and product performance</li>
+                    <li>Responsive support for quotes, stock updates, and sourcing enquiries</li>
+                </ul>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-card">
+                    <strong>300+</strong>
+                    <span>Products supplied</span>
+                </div>
+                <div class="stat-card">
+                    <strong>24/7</strong>
+                    <span>Business support mindset</span>
+                </div>
+                <div class="stat-card">
+                    <strong>100%</strong>
+                    <span>Focus on value and reliability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="contact">
+        <div class="section-heading">
+            <p class="section-label">Get in Touch</p>
+            <h2>Request a quote for your next order.</h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Call us</h3>
+                <p>+234 803 000 0000</p>
+            </div>
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p>sales@mayfaridventures.com</p>
+            </div>
+            <div class="contact-card">
+                <h3>Location</h3>
+                <p>Lagos, Nigeria</p>
+            </div>
+        </div>
+
+        <form id="quoteForm" class="quote-form">
+            <div class="form-grid">
+                <label class="field">
+                    <span>Full name</span>
+                    <input type="text" name="fullName" placeholder="Your name" required />
+                </label>
+
+                <label class="field">
+                    <span>Business name</span>
+                    <input type="text" name="businessName" placeholder="Company or brand" required />
+                </label>
+
+                <label class="field">
+                    <span>Email address</span>
+                    <input type="email" name="email" placeholder="you@example.com" required />
+                </label>
+
+                <label class="field">
+                    <span>Phone number</span>
+                    <input type="tel" name="phone" placeholder="+234 800 000 0000" required />
+                </label>
+
+                <label class="field field-full">
+                    <span>Product interest</span>
+                    <select name="product" required>
+                        <option value="">Select a product category</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Laminating Films">Laminating Films</option>
+                        <option value="Specialty Films">Specialty Films</option>
+                        <option value="Manufacturing Products">Manufacturing Products</option>
+                        <option value="General Enquiry">General Enquiry</option>
+                    </select>
+                </label>
+
+                <label class="field field-full">
+                    <span>Project details</span>
+                    <textarea name="details" rows="5" placeholder="Tell us about the quantity, usage, or deadline you need." required></textarea>
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Send Quote Request</button>
+                <p id="formStatus" class="form-status" aria-live="polite"></p>
+            </div>
+        </form>
+
+        <div class="quote-box">
+            <p>Need a tailored recommendation for your business?</p>
+            <a href="mailto:sales@mayfaridventures.com" class="btn btn-primary">Email Our Team</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 Mayfarid Ventures. All rights reserved.</p>
+    </footer>
+
+    <a
+        class="whatsapp-float"
+        href="https://wa.me/2348030000000?text=Hello%20Mayfarid%20Ventures%2C%20I%20want%20to%20request%20a%20quote."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+    >
+        WhatsApp
+    </a>
+</body>
+</html>
